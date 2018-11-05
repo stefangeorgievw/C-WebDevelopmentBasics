@@ -1,0 +1,54 @@
+﻿@if(@User.Role == "Admin")
+{
+<h1 class="text-center">Hello, Administrator @User.Username</h1>
+}
+ @else
+ {
+ <h1 class="text-center">Hello, @User.Username</h1>
+ }
+<hr class="hr-2 bg-panda">
+    
+<div class="row justify-content-around mb-3">
+
+   
+        
+    
+        <div class="col-md-2 p-1  border-panda">
+            <h2>Pending</h2>
+            @for(int i = 0; i< @Model.PendingPackages.Count();i++)
+            {
+            {var item = @Model.PendingPackages.ToList()[i];}
+            <div class="row justify-content-around">
+                <h4>@item.Description</h4><a href="/Packages/Details?id=@item.Id" class="btn btn-dark  active" role="button" aria-pressed="true">Details</a>
+            </div>
+            }
+
+
+        
+
+    </div>
+    
+    <div class="col-md-2 p-1  border-panda">
+        <h2>Shipped</h2>
+        @for(int i = 0; i< @Model.ShippedPackages.Count();i++)
+        {
+        {var item = @Model.ShippedPackages.ToList()[i];}
+        <div class="row justify-content-around">
+            <h4>@item.Description</h4><a href="/Packages/Details?id=@item.Id" class="btn btn-dark  active" role="button" aria-pressed="true">Details</a>
+        </div>
+        }
+    </div>
+
+    
+    <div class="col-md-2 p-1 border-panda">
+        <h2>Delivered</h2>
+        @for(int i = 0; i< @Model.DeliveredPackages.Count();i++)
+        {
+        {var item = @Model.DeliveredPackages.ToList()[i];}
+        <h3>@item.Description</h3>
+        <div class=" row justify-content-around">
+            <h4>@item.Description</h4><a href="/Packages/Aquire?id=@item.Id" class="btn btn-dark active" role="button" aria-pressed="true">Aquire</a>
+        </div>
+        }
+    </div>
+</div>    

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>IRunes</title>
+</head>
+<body>
+    <header>
+        <h1>IRunes</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Albums/All">Albums</a></li>
+            <li><a href="/Users/Logout">Logout</a></li>
+        </ul>
+        <hr />
+    </header>
+
+    <main>
+        <video width="250" height="200" src="{{link}}" controls></video>
+        <h3>Name: {{name}}</h3>
+        <h3>Price: ${{price}}</h3>
+        <hr />
+        <p><a href="/Albums/Details?id={{albumId}}">Back To Album</a></p>
+    </main>
+
+    <footer>
+        <hr />
+        <p><strong>CopyRight &copy; Sanity Design Studios. All rights reserved.</strong></p>
+    </footer>
+</body>
+</html>

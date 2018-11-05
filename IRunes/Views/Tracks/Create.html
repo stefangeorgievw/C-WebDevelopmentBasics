@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>IRunes</title>
+</head>
+<body>
+    <header>
+        <h1>IRunes</h1>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/Albums/All">Albums</a></li>
+            <li><a href="/Users/Logout">Logout</a></li>
+        </ul>
+        <hr />
+    </header>
+
+    <main>
+        <h2>Create Track</h2>
+        <hr />
+        <form action="/Tracks/Create" method="post">
+            <p>
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Name..." />
+            </p>
+            <p>
+                <label>Link</label>
+                <input type="text" name="link" placeholder="Link..." />
+            </p>
+            <p>
+                <label>Price</label>
+                <input type="text" name="price" placeholder="Price..." />
+            </p>
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+        </form>
+        <hr />
+        <p><a href="/Albums/Details?id={{albumId}}">Back To Album</a></p>
+    </main>
+
+    <footer>
+        <hr />
+        <p><strong>CopyRight &copy; Sanity Design Studios. All rights reserved.</strong></p>
+    </footer>
+</body>
+</html>
